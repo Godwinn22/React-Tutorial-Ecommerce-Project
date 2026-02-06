@@ -1,15 +1,15 @@
 import React from "react";
-import './CheckoutPage.css'
-import './checkout-header.css'
+import "./CheckoutPage.css";
+import "./checkout-header.css";
 
 const CheckoutPage = () => {
     return (
         <div>
-			<title>Checkout</title>
+            <title>Checkout</title>
             <div className="checkout-header">
                 <div className="header-content">
                     <div className="checkout-header-left-section">
-                        <a href="index.html">
+                        <a href="/">
                             <img className="logo" src="images/logo.png" />
                             <img
                                 className="mobile-logo"
@@ -20,7 +20,7 @@ const CheckoutPage = () => {
 
                     <div className="checkout-header-middle-section">
                         Checkout (
-                        <a className="return-to-home-link" href="index.html">
+                        <a className="return-to-home-link" href="/">
                             3 items
                         </a>
                         )
@@ -213,7 +213,9 @@ const CheckoutPage = () => {
                     </div>
 
                     <div className="payment-summary">
-                        <div className="payment-summary-title">Payment Summary</div>
+                        <div className="payment-summary-title">
+                            Payment Summary
+                        </div>
 
                         <div className="payment-summary-row">
                             <div>Items (3):</div>

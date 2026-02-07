@@ -5,7 +5,12 @@ import Header from "../components/Header";
 const HomePage = () => {
     return (
         <>
-			<Header />
+            <link
+                rel="shortcut icon"
+                href="home-favicon.png"
+                type="image/x-icon"
+            />
+            <Header />
             <div>
                 <div className="home-page">
                     <div className="products-grid">

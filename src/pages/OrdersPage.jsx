@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router';
 import Header from "../components/Header";
 import './OrdersPage.css'
 
@@ -6,6 +7,11 @@ const OrdersPage = () => {
     return (
         <div>
 			<title>Orders</title>
+			<link
+                rel="shortcut icon"
+                href="orders-favicon.png"
+                type="image/x-icon"
+            />
             <Header />
             <div className="orders-page">
                 <div className="page-title">Your Orders</div>
@@ -58,11 +64,11 @@ const OrdersPage = () => {
                             </div>
 
                             <div className="product-actions">
-                                <a href="/tracking">
+                                <Link to="/tracking">
                                     <button className="track-package-button button-secondary">
                                         Track package
                                     </button>
-                                </a>
+                                </Link>
                             </div>
 
                             <div className="product-image-container">
@@ -89,11 +95,11 @@ const OrdersPage = () => {
                             </div>
 
                             <div className="product-actions">
-                                <a href="/tracking">
+                                <Link to="/tracking">
                                     <button className="track-package-button button-secondary">
                                         Track package
                                     </button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -144,11 +150,11 @@ const OrdersPage = () => {
                             </div>
 
                             <div className="product-actions">
-                                <a href="/tracking">
+                                <Link to="/tracking">
                                     <button className="track-package-button button-secondary">
                                         Track package
                                     </button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

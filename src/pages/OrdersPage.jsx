@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Buyagain from '../assets/images/icons/buy-again.png'
 import './OrdersPage.css'
 
-const OrdersPage = () => {
+const OrdersPage = ({ cart }) => {
     return (
         <div>
 			<title>Orders</title>
@@ -13,7 +13,7 @@ const OrdersPage = () => {
                 href="orders-favicon.png"
                 type="image/x-icon"
             />
-            <Header />
+            <Header cart={cart} />
             <div className="orders-page">
                 <div className="page-title">Your Orders</div>
 

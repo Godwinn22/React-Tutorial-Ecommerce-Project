@@ -4,19 +4,13 @@ import CheckMark from "../assets/images/icons/checkmark.png";
 import "./HomePage.css";
 import Header from "../components/Header";
 
-const HomePage = () => {
-	const [products, setProducts] = useState([]);
-	const [cart, setCart] = useState([]);
+const HomePage = ({ cart }) => {
+    const [products, setProducts] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:3000/api/products")
-			.then((response) => {
+        axios.get("/api/products")
+		.then((response) => {
             setProducts(response.data);
         });
-
-		axios.get("http://localhost:3000/api/cart-items")
-			.then((response) => {
-			setCart(response.data);
-		});
     }, []); // empty dependency array means this effect runs once when the component mounts
     return (
         <>
@@ -25,7 +19,7 @@ const HomePage = () => {
                 href="home-favicon.png"
                 type="image/x-icon"
             />
-            <Header cart={cart}/>
+            <Header cart={cart} />
             <div>
                 <div className="home-page">
                     <div className="products-grid">

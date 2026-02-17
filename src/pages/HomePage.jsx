@@ -1,10 +1,14 @@
-import React from "react";
+import axios from "axios";
 import CheckMark from "../assets/images/icons/checkmark.png";
 import { products } from "../../starting-code/data/products";
 import "./HomePage.css";
 import Header from "../components/Header";
 
 const HomePage = () => {
+	axios.get('http://localhost:3000/api/products')
+	.then((response) => { // 
+		console.log(response.data);
+	})
     return (
         <>
             <link

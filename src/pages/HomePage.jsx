@@ -6,11 +6,17 @@ import Header from "../components/Header";
 
 const HomePage = () => {
 	const [products, setProducts] = useState([]);
+	const [cart, setCart] = useState([]);
     useEffect(() => {
         axios.get("http://localhost:3000/api/products")
 			.then((response) => {
             setProducts(response.data);
         });
+
+		axios.get("http://localhost:3000/api/cart-items")
+			.then((response) => {
+			setCart(response.data);
+		});
     }, []); // empty dependency array means this effect runs once when the component mounts
     return (
         <>
@@ -19,7 +25,7 @@ const HomePage = () => {
                 href="home-favicon.png"
                 type="image/x-icon"
             />
-            <Header />
+            <Header cart={cart}/>
             <div>
                 <div className="home-page">
                     <div className="products-grid">
